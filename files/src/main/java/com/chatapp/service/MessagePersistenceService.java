@@ -53,6 +53,7 @@ public class MessagePersistenceService {
         } catch (Exception e) {
             entity.setReactionsJson("{}");
         }
+        entity.setImageUrl(message.imageUrl());
         repository.save(entity);
     }
 
@@ -81,7 +82,8 @@ public class MessagePersistenceService {
             e.getReplyTo(),
             reactions,
             e.isEdited(),
-            e.getEditedAt()
+            e.getEditedAt(),
+            e.getImageUrl()
         );
     }
 

@@ -50,6 +50,9 @@ public class StoredMessage {
     @Column(length = 8000)
     private String reactionsJson;
 
+    @Column(length = 2048)
+    private String imageUrl;
+
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
     public String getMessageId() { return messageId; }
@@ -78,4 +81,6 @@ public class StoredMessage {
     public void setEditedAt(LocalDateTime editedAt) { this.editedAt = editedAt; }
     public String getReactionsJson() { return reactionsJson; }
     public void setReactionsJson(String reactionsJson) { this.reactionsJson = reactionsJson; }
+    public String getImageUrl() { return imageUrl; }
+    public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
 }

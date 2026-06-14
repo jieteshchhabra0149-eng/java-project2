@@ -100,7 +100,8 @@ public class ChatController {
             message.replyTo(),
             message.reactions(),
             message.edited(),
-            message.editedAt()
+            message.editedAt(),
+            message.imageUrl()
         );
 
         chatService.processMessage(sessionId, toSend);
