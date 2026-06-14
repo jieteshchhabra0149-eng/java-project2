@@ -181,7 +181,7 @@ public class ChatService {
             "NexusGuide", "🤖", "#B06EFF",
             ChatMessage.MessageType.TYPING, roomId,
             java.time.LocalDateTime.now(),
-            null, null, Map.of(), false, null
+            null, null, Map.of(), false, null, null
         );
         messagingTemplate.convertAndSend("/topic/room/" + roomId + "/typing", thinking);
     }
